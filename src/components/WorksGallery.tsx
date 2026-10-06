@@ -87,39 +87,14 @@ export default function WorksGallery() {
                 // A subtle border radius effect using clip-path requires SVG, but polygon is sharp and brutalist which fits nicely.
               }}
             >
-              {/* Inner container to apply scale on hover without breaking the clip-path bounds */}
               <div className="w-full h-full p-[1px]">
-                {project.id === "meghalaya" ? (
-                  // Clean, minimal Editorial Bento Grid for Meghalaya
-                  <div className="w-full h-full flex bg-ink/5 transition-transform duration-700 ease-[cubic-bezier(0.2,0.8,0.2,1)] group-hover:scale-105">
-                    {/* Main Cover (Left Half) */}
-                    <div className="w-1/2 h-full border-r border-ivory/50">
-                      <img 
-                        src={siteAssets.meghalaya.pages[0]} 
-                        alt="Meghalaya Logo"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    {/* Secondary Assets (Right Half Split) */}
-                    <div className="w-1/2 h-full flex flex-col">
-                      <div className="w-full h-1/2 border-b border-ivory/50 bg-ink/10">
-                        <img 
-                          src={siteAssets.meghalaya.pages[6]} 
-                          alt="Meghalaya Detail 1"
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                      <div className="w-full h-1/2 bg-ink/10">
-                        <img 
-                          src={siteAssets.meghalaya.pages[10]} 
-                          alt="Meghalaya Detail 2"
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                    </div>
+                {project.id === "app" ? (
+                  <div className="w-full h-full bg-[#E56353] flex items-center justify-center transition-transform duration-700 ease-[cubic-bezier(0.2,0.8,0.2,1)] group-hover:scale-110">
+                    <span className="font-display text-4xl md:text-5xl text-white tracking-tight">
+                      In-A-Bit
+                    </span>
                   </div>
                 ) : (
-                  // Standard single image for other projects
                   <img
                     src={project.thumbnail}
                     alt={`${project.title} thumbnail`}

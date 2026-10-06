@@ -1,5 +1,6 @@
 import Meghalaya from "@/components/Meghalaya";
 import ProjectNavigation from "@/components/ProjectNavigation";
+import ProjectCloseButton from "@/components/ProjectCloseButton";
 
 export const metadata = {
   title: "Meghalaya Branding - Disha Balar",
@@ -9,6 +10,7 @@ export const metadata = {
 export default function MeghalayaProjectPage() {
   return (
     <main>
+      <ProjectCloseButton />
       <Meghalaya />
       <ProjectNavigation 
         prevProject={{ title: "BOOK", route: "/works/book" }}

@@ -74,7 +74,7 @@ export default function Wirewood() {
       ref={containerRef}
     >
       {/* Pinned container area */}
-      <div className="h-screen w-full flex flex-col items-center justify-center pt-20 overflow-hidden">
+      <div className="h-screen w-full flex flex-col items-center justify-center pt-20">
         
         <div className="absolute top-12 left-0 w-full flex flex-col items-center text-center z-50 pointer-events-none">
           <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-ink/70 mb-4 block">
@@ -91,7 +91,7 @@ export default function Wirewood() {
         {/* 3D Book wrapper */}
         <div 
           ref={bookRef}
-          className="relative w-[90vw] max-w-[1000px] aspect-[2/1] perspective-[3000px] mt-16"
+          className="relative w-[85vw] max-w-[900px] aspect-[5/3.5] perspective-[3000px] mt-12"
         >
           {/* Leaves are anchored to the center, positioned on the right half initially */}
           {Array.from({ length: numLeaves }).map((_, i) => (
@@ -105,7 +105,7 @@ export default function Wirewood() {
                 <img 
                   src={pages[i * 2]} 
                   alt={`Page ${i * 2 + 1}`}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </div>
               
@@ -117,7 +117,7 @@ export default function Wirewood() {
                 <img 
                   src={pages[i * 2 + 1]} 
                   alt={`Page ${i * 2 + 2}`}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </div>
             </div>

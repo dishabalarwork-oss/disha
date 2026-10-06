@@ -30,7 +30,6 @@ export const siteAssets = {
   },
   wirewood: {
     pages: [
-      "/images/wirewood/pages/pub-01.jpg",
       "/images/wirewood/pages/pub-02.jpg",
       "/images/wirewood/pages/pub-03.jpg",
       "/images/wirewood/pages/pub-04.jpg",

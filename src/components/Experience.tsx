@@ -46,12 +46,19 @@ export default function Experience() {
                   <h3 className="font-display text-2xl lg:text-4xl leading-tight mb-2">
                     {role.role}
                   </h3>
-                  <p className="font-body text-sm lg:text-base text-ink/60 mb-3">
+                  <p className="font-body text-sm lg:text-base text-ink/60 mb-5">
                     {role.company}
                   </p>
-                  <p className="font-body text-sm lg:text-base text-ink/75 max-w-md leading-relaxed">
-                    {role.impact}
-                  </p>
+                  <ul className="space-y-2 max-w-lg">
+                    {role.bullets.map((bullet, j) => (
+                      <li
+                        key={j}
+                        className="font-body text-sm lg:text-[15px] text-ink/70 leading-relaxed pl-4 relative before:content-[''] before:absolute before:left-0 before:top-[9px] before:w-1.5 before:h-1.5 before:rounded-full before:bg-ink/25"
+                      >
+                        {bullet}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             );

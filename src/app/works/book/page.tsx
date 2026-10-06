@@ -1,5 +1,6 @@
 import Wirewood from "@/components/Wirewood";
 import ProjectNavigation from "@/components/ProjectNavigation";
+import ProjectCloseButton from "@/components/ProjectCloseButton";
 
 export const metadata = {
   title: "Book Project - Disha Balar",
@@ -9,6 +10,7 @@ export const metadata = {
 export default function BookProjectPage() {
   return (
     <main>
+      <ProjectCloseButton />
       <Wirewood />
       <ProjectNavigation 
         prevProject={{ title: "APP", route: "/works/app" }}

@@ -1,5 +1,6 @@
 import InABit from "@/components/InABit";
 import ProjectNavigation from "@/components/ProjectNavigation";
+import ProjectCloseButton from "@/components/ProjectCloseButton";
 
 export const metadata = {
   title: "App Design - Disha Balar",
@@ -9,6 +10,7 @@ export const metadata = {
 export default function AppProjectPage() {
   return (
     <main>
+      <ProjectCloseButton />
       <InABit />
       <ProjectNavigation 
         prevProject={{ title: "MEGHALAYA", route: "/works/meghalaya" }}
