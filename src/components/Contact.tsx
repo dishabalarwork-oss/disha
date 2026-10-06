@@ -46,14 +46,7 @@ export default function Contact() {
         </a>
       </div>
 
-      {/* Signature */}
-      <div className="w-32 lg:w-48 opacity-40">
-        <img
-          src={siteAssets.contact.signature}
-          alt="Disha Balar signature"
-          className="w-full h-auto invert"
-        />
-      </div>
+
 
       {/* Footer line */}
       <div className="absolute bottom-8 left-6 right-6 lg:left-[7vw] lg:right-[7vw] flex items-center justify-between">

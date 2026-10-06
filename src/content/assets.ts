@@ -85,6 +85,6 @@ export const siteAssets = {
   },
   contact: {
     signature: "/images/contact/signature.svg",
-    resume: "/Disha-Balar-Resume.pdf",
+    resume: "https://drive.google.com/file/d/1qBW5XS2EucHW__JjWPrau7O2vJCcvb-v/view?usp=sharing",
   },
 };

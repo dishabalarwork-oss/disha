@@ -24,6 +24,12 @@ export default function GSAPManager() {
   useGSAP(() => {
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     
+    // Disable browser's automatic scroll restoration so page always starts at the top
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+    window.scrollTo(0, 0);
+    
     // Initialize Lenis for buttery smooth scrolling
     const lenis = new Lenis({
       duration: 1.2,
@@ -68,8 +74,8 @@ export default function GSAPManager() {
     // 2. Text reveals (Headings)
     const headings = gsap.utils.toArray<HTMLElement>("h1, h2, h3");
     headings.forEach((heading) => {
-      // Don't animate the interactive hero h1
-      if (heading.closest('#hero')) return;
+      // Don't animate the interactive hero h1 or elements with no-reveal
+      if (heading.closest('#hero') || heading.classList.contains('no-reveal')) return;
       
       gsap.from(heading, {
         scrollTrigger: {

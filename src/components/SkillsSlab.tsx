@@ -217,8 +217,8 @@ export default function SkillsSlab() {
           <div
             key={i}
             style={{
-              width: "clamp(26px, 5vw, 64px)",
-              height: "clamp(40px, 7.5vw, 96px)",
+              width: "clamp(18px, 4vw, 64px)",
+              height: "clamp(28px, 6vw, 96px)",
               position: "relative",
               display: "flex",
               alignItems: "center",
@@ -262,7 +262,7 @@ export default function SkillsSlab() {
               }}
               style={{
                 fontFamily: "var(--font-display), serif",
-                fontSize: "clamp(18px, 3.8vw, 50px)",
+                fontSize: "clamp(12px, 3.2vw, 50px)",
                 fontWeight: 700,
                 lineHeight: 1,
                 color: "#1A0E12",

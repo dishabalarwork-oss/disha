@@ -91,7 +91,7 @@ export default function Wirewood() {
         {/* 3D Book wrapper */}
         <div 
           ref={bookRef}
-          className="relative w-[85vw] max-w-[900px] aspect-[5/3.5] perspective-[3000px] mt-12"
+          className="relative w-[95vw] md:w-[85vw] max-w-[900px] aspect-[5/3.5] perspective-[3000px] mt-12"
         >
           {/* Leaves are anchored to the center, positioned on the right half initially */}
           {Array.from({ length: numLeaves }).map((_, i) => (
@@ -101,7 +101,7 @@ export default function Wirewood() {
               style={{ transformStyle: "preserve-3d" }}
             >
               {/* Front Face */}
-              <div className="absolute inset-0 backface-hidden shadow-[-4px_0_20px_rgba(0,0,0,0.05)] border-l border-black/5 bg-white">
+              <div className="absolute inset-0 backface-hidden shadow-[-4px_0_20px_rgba(0,0,0,0.05)] border-l border-black/5 bg-white no-reveal">
                 <img 
                   src={pages[i * 2]} 
                   alt={`Page ${i * 2 + 1}`}
@@ -111,7 +111,7 @@ export default function Wirewood() {
               
               {/* Back Face */}
               <div 
-                className="absolute inset-0 backface-hidden shadow-[4px_0_20px_rgba(0,0,0,0.05)] border-r border-black/5 bg-white"
+                className="absolute inset-0 backface-hidden shadow-[4px_0_20px_rgba(0,0,0,0.05)] border-r border-black/5 bg-white no-reveal"
                 style={{ transform: "rotateY(180deg)" }}
               >
                 <img 

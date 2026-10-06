@@ -102,7 +102,7 @@ export default function Meghalaya() {
               Using object-contain prevents ANY cropping of the image. 
               The deterministic width (80vw) ensures track.scrollWidth is perfectly calculated on mount!
             */}
-            <div className="w-full h-full flex items-center justify-center">
+            <div className="w-full h-full flex items-center justify-center no-reveal">
               <img
                 src={src}
                 alt={`Meghalaya Slide ${i + 1}`}
